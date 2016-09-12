@@ -1,11 +1,10 @@
 function [ retorno ] = BrilhoAddY( imgYIQ, c )
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
-        [M,N] = size(imgYIQ);
    
-    for i=1:M
-        for j=1:N
-            imgYIQ(i,j, 1) = img(i,j, 1) + c;
+    for i=1:size(imgYIQ,1);
+        for j=1:size(imgYIQ,2);
+            imgYIQ(i,j, 1) = imgYIQ(i,j, 1) + c;
         end;    
     end;    
     retorno = imgYIQ;

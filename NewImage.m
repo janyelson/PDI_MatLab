@@ -3,10 +3,8 @@ function [ retorno ] = NewImage( img1, img2 )
 %   Detailed explanation goes here
     if size(img1) == size(img2)
         img = uint8(zeros(size(img1)));
-        [M,N] = size(img);
-        
-        for i=1:M
-            for j=1:N
+        for i=1:size(img1,1)
+            for j=1:size(img1,2)
                 img(i,j,1) =  (img1(i,j,1) + img2(i,j,1))/2;
                 img(i,j,2) =  (img1(i,j,2) + img2(i,j,2))/2;
                 img(i,j,3) =  (img1(i,j,3) + img2(i,j,3))/2;
